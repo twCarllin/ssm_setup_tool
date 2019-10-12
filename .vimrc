@@ -12,7 +12,6 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'junegunn/fzf.vim'
 Plugin 'rking/ag.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'vim-airline/vim-airline'
@@ -86,15 +85,9 @@ let mapleader=","       " leader is comma
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 
-" fzf quick search
-nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <silent> vv :call fzf#run({
-\   'right': winwidth('.') / 2,
-\   'sink':  'vertical botright split' })<CR>
 
 " ag quick search
 nnoremap <leader>a :Ag
-
 
 
 " Quick save command
