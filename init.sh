@@ -4,8 +4,13 @@ sudo cp ./.vimrc $HOME
 sudo cp ./.tmux.conf $HOME
 
 sudo apt-get update
-sudo apt-get install fzf
-sudo apt-get install the_silver_searcher
+
+# install silver search
+sudo apt-get install silversearcher-ag
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 sudo vim +PluginInstall +qall
