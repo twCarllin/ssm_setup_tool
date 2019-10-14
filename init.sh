@@ -26,4 +26,13 @@ git config --global alias.st status
 git config --global alias.br branch
 git config --global alias.adog "log --all --decorate --oneline --graph"
 
-sudo apt-get install awscli
+# install awscli
+yes Yes | sudo apt-get install awscli
+
+# install python2.7
+yes Yes | sudo apt install python-minimal
+
+# install pip for python2.7 & python3.6.8
+yes Yes | sudo apt install python-pip
+
+
