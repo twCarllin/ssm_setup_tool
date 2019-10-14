@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo cp ./.vimrc $HOME
-sudo cp ./.tmux.conf $HOME
+sudo cp ./.vimrc "$HOME"
+sudo cp ./.tmux.conf "$HOME"
 
 sudo apt-get update
 
@@ -12,12 +12,8 @@ sudo apt-get install silversearcher-ag
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
-sudo vim +PluginInstall +qall
-
  #Prompt
- echo 'PROMPT="%{$fg[cyan]%}%d $(git_prompt_info)
- %{$fg_bold[white]%}>> %{$reset_color%}"' >> ~/.bashrc
+echo 'PROMPT="%{$fg[cyan]%}%d %{$fg_bold[white]%}>> %{$reset_color%}"' >> ~/.bashrc
 
 git config --global color.ui true
 git config --global alias.co checkout
@@ -35,4 +31,13 @@ yes Yes | sudo apt install python-minimal
 # install pip for python2.7 & python3.6.8
 yes Yes | sudo apt install python-pip
 
+# prepare for install Vim YouCompleteMe
+yes Yes | sudo apt install build-essential cmake python3-dev
+
+# install vim plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+sudo vim +PluginInstall +qall
+
+# set up YouCompleteMe
+sudo ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
