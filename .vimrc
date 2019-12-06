@@ -9,6 +9,11 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
+" set the runtime path to include fzf
+set rtp+=~/.fzf
+
+
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'tomtom/tcomment_vim'
@@ -89,6 +94,13 @@ nnoremap <Leader>O O<Esc>
 
 " ag quick search
 nnoremap <leader>a :Ag
+
+
+" fzf quick search
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> vv :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
 
 
 " Quick save command
