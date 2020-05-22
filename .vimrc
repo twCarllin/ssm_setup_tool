@@ -9,6 +9,11 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
+" set the runtime path to include fzf
+set rtp+=~/.fzf
+
+
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'tomtom/tcomment_vim'
@@ -30,9 +35,9 @@ set relativenumber
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set list
 set ru
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set showcmd
 set cursorline
@@ -89,6 +94,13 @@ nnoremap <Leader>O O<Esc>
 
 " ag quick search
 nnoremap <leader>a :Ag
+
+
+" fzf quick search
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> vv :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
 
 
 " Quick save command
@@ -155,6 +167,9 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
+noremap <Leader>e :SyntasticCheck<CR>
+noremap <Leader>r :SyntasticToggleMode<CR>
