@@ -11,6 +11,9 @@ sudo apt-get install silversearcher-ag
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+cp -r ./shell ~/.fzf/shell
+cp -r ./.fzf.bash ~/
+source ~/.fzf.bash
 
  #Prompt
 echo 'PROMPT="%{$fg[cyan]%}%d %{$fg_bold[white]%}>> %{$reset_color%}"' >> ~/.bashrc
