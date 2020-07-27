@@ -173,3 +173,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
 noremap <Leader>e :SyntasticCheck<CR>
 noremap <Leader>r :SyntasticToggleMode<CR>
+
+" python flake8 ignore
+let g:syntastic_python_flake8_args='--ignore=E501,F401,E228,E302,E203'
