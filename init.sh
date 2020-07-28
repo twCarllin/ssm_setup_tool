@@ -43,6 +43,10 @@ yes Yes | sudo apt install build-essential cmake python3-dev
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 sudo vim +PluginInstall +qall
 
-# set up YouCompleteMe
-sudo python3.6 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+# install virtualenv
+sudo apt-get install python3-pip
+sudo pip3 install virtualenv
+
+## set up YouCompleteMe
+#sudo python3.6 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
