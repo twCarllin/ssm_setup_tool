@@ -31,15 +31,13 @@ yes Yes | sudo apt-get install awscli
 # install python2.7
 yes Yes | sudo apt install python-minimal
 
-sudo add-apt-repository ppa:deadsnakes/ppa
-yes Yes | sudo apt update
-yes Yes | sudo apt install python3.6
+./install_6.8.sh
 
 # install pip for python2.7 & python3.6.8
 yes Yes | sudo apt install python-pip
 
 # prepare for install Vim YouCompleteMe
-yes Yes | sudo apt install build-essential cmake python3.6-dev
+yes Yes | sudo apt install build-essential cmake python3-dev
 
 # install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
