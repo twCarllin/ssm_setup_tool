@@ -39,12 +39,12 @@ yes Yes | sudo apt install python3.6
 yes Yes | sudo apt install python-pip
 
 # prepare for install Vim YouCompleteMe
-yes Yes | sudo apt install build-essential cmake python3-dev
+yes Yes | sudo apt install build-essential cmake python3.6-dev
 
 # install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 sudo vim +PluginInstall +qall
 
 # set up YouCompleteMe
-sudo ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+sudo python3.6 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
