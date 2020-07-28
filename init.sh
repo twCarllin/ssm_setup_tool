@@ -31,6 +31,10 @@ yes Yes | sudo apt-get install awscli
 # install python2.7
 yes Yes | sudo apt install python-minimal
 
+sudo add-apt-repository ppa:deadsnakes/ppa
+yes Yes | sudo apt update
+yes Yes | sudo apt install python3.6
+
 # install pip for python2.7 & python3.6.8
 yes Yes | sudo apt install python-pip
 
